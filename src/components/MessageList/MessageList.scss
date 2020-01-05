@@ -1,0 +1,4 @@
+.chat-messages{
+  flex:1; background-color:#e5ddd5; padding:20px;
+  &-list{display:flex; flex-direction:column;}
+}

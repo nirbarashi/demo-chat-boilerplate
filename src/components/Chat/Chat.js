@@ -1,14 +1,18 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import io from "socket.io-client";
-import Header from "../Header/Header"
+import "./Chat.scss";
+import Header from "../Header/Header";
+import MessageList from "../MessageList/MessageList";
+import InputBox from "../InputBox/InputBox"
 
+const cl = console.log;
 
 const Chat = () => {
-	const SOCKET_URL 	= 'https://spotim-demo-chat-server.herokuapp.com',
-		cl 				= console.log;
+	const SOCKET_ENDPOINT = 'https://spotim-demo-chat-server.herokuapp.com',
+		[ messages, setMessages ] = useState([]);
 
 	useEffect(() => {
-		let socket = io(SOCKET_URL);
+		let socket = io(SOCKET_ENDPOINT);
 		socket.on("connect", () => {
 			// socket.emit('spotim/chat', { text: 'Hello World !'}, (data) => cl(data));
 			cl("connected to chat server!");
@@ -16,10 +20,15 @@ const Chat = () => {
 		socket.on("disconnect", () => cl("disconnected from chat server!"));
 	});
 
+	const sendMessage = (e) => {
+		cl('send message', e);
+	}
+
 	return (
 		<div className="chat">
 			<Header/>
-			<h1>Nir's Chat App2</h1>
+			<MessageList/>
+			<InputBox sendMessage={sendMessage}/>
 		</div>
 	)
 }

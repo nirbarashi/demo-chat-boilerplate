@@ -3,7 +3,7 @@ import "./Header.scss";
 
 const Header = () => {
 	return (
-		<header className="messanger-header">Header</header>
+		<header className="chat-header">Welcome to the Spot.IM Chat app</header>
 	)
 }
 
