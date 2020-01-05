@@ -1,21 +1,12 @@
+$black:#000;
+$white:#fff;
+$gray:#ededed;
+
+html{
+  font-family:arial;
+}
+
 body {
   margin: 0;
   padding: 0;
-
-  .spotim-header {
-    text-align: center;
-    background-color: #0082DD;
-    height: 150px;
-    padding: 20px;
-    color: white;
-    .spotim-title {
-      font-size: 1.5em;
-    }
-  }
 }
-
-
-
-
-
-
