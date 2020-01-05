@@ -3,7 +3,12 @@ $white: #fff;
 
 .message-box{
   background-color:$gray; display:flex; padding:10px;
-  &-input{flex:1; padding:10px; max-height:100px; overflow:auto; background-color:$white; border-radius:8px;}
+  &-input{
+    flex:1; padding:10px; max-height:100px; overflow:auto; background-color:$white; border-radius:8px;
+    &:empty{
+      &::before{content:attr(placeholder); display:block; /*For Firefox*/color:#8193ab;}
+    }
+  }
   &-button{
     background-color:transparent; border-width:0; padding:10px;
     &::before{

@@ -1,9 +1,9 @@
 import React from 'react';
 import "./Message.scss";
 
-const Message = ({ isSelf }) => {
+const Message = ({ message }) => {
 	return (
-		<li className={`chat-message ${isSelf ? 'is-self': ''}`}>
+		<li className={`chat-message ${message.isSelf ? 'is-self': ''}`}>
 			<header className="profile">
 				<img className="profile-image" src="" alt="" />
 				<span className="profile-name">Eliezer Ben Yehuda</span>
