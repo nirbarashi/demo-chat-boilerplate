@@ -9,7 +9,7 @@ const Message = ({ message, username }) => {
 		<li className={`chat-message ${isSentByCurrentUser ? 'is-self': ''}`}>
 			<header className="profile">
 				<Avatar avatar={message.avatar} />
-				<span className="profile-name">{username}</span>
+				<span className="profile-name">{message.username}</span>
 			</header>
 			<p className="chat-message-content">{message.text}</p>
 		</li>
