@@ -13,7 +13,7 @@ const Chat = () => {
 	const
 		[ messages, setMessages ] = useState([{ username: 'Nir', text: 'Welcome!', avatar: 'pikachu'}, { username: 'Alon22', text: 'Thank you sir', avatar: 'snorlax'}]),
 		[ message, setMessage ] = useState(''), // Current message text
-		[ userInfo, setUserInfo ] = useState(storage.get(USER_INFO_LS_KEY) || {}); // Current user
+		[ userInfo, setUserInfo ] = useState({}); // Current user
 
 	useEffect(() => {
 		socket = io(SOCKET_ENDPOINT);
@@ -22,6 +22,11 @@ const Chat = () => {
 			cl("connected to chat server!");
 		});
 		socket.on("disconnect", () => cl("disconnected from chat server!"));
+	}, []);
+
+	useEffect(() => { // Read user data from storage for the first time
+		let storedUserInfo = storage.get(USER_INFO_LS_KEY);
+		storedUserInfo && setUserInfo(storedUserInfo);
 	}, []);
 
 	useEffect(() => {
