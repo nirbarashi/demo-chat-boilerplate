@@ -1,7 +1,6 @@
 Add your general design and decision comments here:
 
 - Colors and design idea were taken from Whatsapp Web :)
-- I chose to use <div contenteditable> instead of input/textarea because
 - Infrastructure is straight forward and explaining itself
 
 
