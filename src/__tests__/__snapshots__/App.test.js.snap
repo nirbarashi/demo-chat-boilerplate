@@ -1,0 +1,99 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App Matches the snapshot 1`] = `
+<div
+  className="chat"
+>
+  <header
+    className="chat-header"
+  >
+    Welcome to the Spot.IM Chat app
+  </header>
+  <main
+    className="chat-messages"
+  >
+    <ol
+      className="chat-messages-list"
+    >
+      <li
+        className="chat-message "
+      >
+        <header
+          className="profile"
+        >
+          <img
+            alt=""
+            className="profile-image"
+            src="003-pikachu.png"
+          />
+          <span
+            className="profile-name"
+          >
+            Nir
+          </span>
+        </header>
+        <p
+          className="chat-message-content"
+        >
+          Welcome friend, feel free to send messages 
+        </p>
+      </li>
+      <li
+        className="chat-message "
+      >
+        <header
+          className="profile"
+        >
+          <img
+            alt=""
+            className="profile-image"
+            src="001-snorlax.png"
+          />
+          <span
+            className="profile-name"
+          >
+            Alon22
+          </span>
+        </header>
+        <p
+          className="chat-message-content"
+        >
+          Thank you !
+        </p>
+      </li>
+    </ol>
+  </main>
+  <div
+    className="message-box"
+  >
+    <div
+      className="message-box-user-info"
+    >
+      <img
+        alt=""
+        className="profile-image"
+        src="003-pikachu.png"
+      />
+      <input
+        className="message-box-input user-info-username"
+        onChange={[Function]}
+        placeholder="Enter your name here..."
+        type="text"
+        value=""
+      />
+    </div>
+    <input
+      className="message-box-input"
+      onChange={[Function]}
+      onKeyPress={[Function]}
+      placeholder="Type your message here..."
+      type="text"
+      value=""
+    />
+    <button
+      className="message-box-button"
+      onClick={[Function]}
+    />
+  </div>
+</div>
+`;

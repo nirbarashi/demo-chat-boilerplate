@@ -31,7 +31,7 @@ const Chat = () => {
 		let { username, avatar } = userInfo;
 
 		if (username && avatar && text) {
-			socket.emit(SEND_MESSAGE_EVENT, {...userInfo, text}); // Send message to socket with current state whom includes { username, avatar, text }
+			socket.emit(SEND_MESSAGE_EVENT, {...userInfo, text}); // Send message to socket with current state which includes { username, avatar } and the message text
 		}
 	}
 

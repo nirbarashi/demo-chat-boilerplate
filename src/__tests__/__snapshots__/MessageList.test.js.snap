@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MessageList component Matches the snapshot 1`] = `
+<main
+  className="chat-messages"
+>
+  <ol
+    className="chat-messages-list"
+  >
+    <li
+      className="chat-message is-self"
+    >
+      <header
+        className="profile"
+      >
+        <img
+          alt=""
+          className="profile-image"
+          src="003-pikachu.png"
+        />
+        <span
+          className="profile-name"
+        >
+          Nir
+        </span>
+      </header>
+      <p
+        className="chat-message-content"
+      >
+        Welcome friend, feel free to send messages 
+      </p>
+    </li>
+    <li
+      className="chat-message "
+    >
+      <header
+        className="profile"
+      >
+        <img
+          alt=""
+          className="profile-image"
+          src="001-snorlax.png"
+        />
+        <span
+          className="profile-name"
+        >
+          Alon22
+        </span>
+      </header>
+      <p
+        className="chat-message-content"
+      >
+        Thank you !
+      </p>
+    </li>
+  </ol>
+</main>
+`;
