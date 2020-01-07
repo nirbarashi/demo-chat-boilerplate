@@ -10,7 +10,7 @@ let socket;
 
 const Chat = () => {
 	const
-		[ messages, setMessages ] = useState([{ username: 'Nir', text: 'Welcome!', avatar: 'pikachu'}, { username: 'Alon22', text: 'Thank you sir', avatar: 'snorlax'}]),
+		[ messages, setMessages ] = useState([{ username: 'Nir', text: 'Welcome friend, feel free to send messages ', avatar: 'pikachu'}, { username: 'Alon22', text: 'Thank you !', avatar: 'snorlax'}]),
 		[ userInfo, setUserInfo ] = useState({ username: '', avatar: 'pikachu' }); // Current user
 
 	useEffect(() => {
@@ -28,8 +28,6 @@ const Chat = () => {
 	}, []);
 
 	const sendMessage = (text) => {
-		// event.preventDefault();
-		// cl('send message', event);
 		let { username, avatar } = userInfo;
 
 		if (username && avatar && text) {

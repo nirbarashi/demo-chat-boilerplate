@@ -4,7 +4,7 @@ $white: #fff;
 .message-box{
   background-color:$gray; display:flex; padding:10px; width: 100%; position: sticky; bottom: 0;
   &-input{
-    flex:1; padding:10px; max-height:100px; overflow:auto; background-color:$white; border-radius:8px;
+    flex:1; padding:10px; max-height:100px; overflow:auto; background-color:$white; border-radius:8px; outline: none; margin-right: 5px;
   }
   &-button{
     background-color:transparent; border-width:0; padding:10px;

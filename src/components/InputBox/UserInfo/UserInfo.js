@@ -13,9 +13,7 @@ const UserInfo = ({ userInfo, setUserInfo }) => {
 	}, []);
 
 	useEffect(() => { // Keep user info persistent across browser refreshes
-		if (userInfo.username && userInfo.avatar) { // No need to save if empty (first load)
 			storage.set(USER_INFO_LS_KEY, userInfo);
-		}
 	}, [userInfo]);
 
 	const handleUsernameChange = (username) => {
@@ -32,7 +30,7 @@ const UserInfo = ({ userInfo, setUserInfo }) => {
 	return (
 		<div className="message-box-user-info">
 			<Avatar avatar={userInfo.avatar} />
-			<input className="" type="text" value={userInfo.username} onChange={(event) => handleUsernameChange(event.target.value.trim())} placeholder="Enter your name here..." />
+			<input className="message-box-input user-info-username" type="text" value={userInfo.username} onChange={(event) => handleUsernameChange(event.target.value.trim())} placeholder="Enter your name here..." />
 		</div>
 	)
 }
