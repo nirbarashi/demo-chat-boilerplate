@@ -37,7 +37,7 @@ const Chat = () => {
 
 	useEffect(() => { // Keep user info persistent across browser refreshes
 		// cl('save to storage effect', localStorage);
-		if (userInfo.username && userInfo.avatar) { // No need to save first time
+		if (userInfo.username && userInfo.avatar) { // No need to save if empty (first load)
 			storage.set(USER_INFO_LS_KEY, userInfo);
 			// cl('saving to storage', localStorage);
 		}
