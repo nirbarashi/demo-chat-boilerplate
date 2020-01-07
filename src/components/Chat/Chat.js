@@ -11,7 +11,7 @@ let socket;
 const Chat = () => {
 	const
 		[ messages, setMessages ] = useState([{ username: 'Nir', text: 'Welcome!', avatar: 'pikachu'}, { username: 'Alon22', text: 'Thank you sir', avatar: 'snorlax'}]),
-		[ userInfo, setUserInfo ] = useState({ avatar: 'pikachu' }); // Current user
+		[ userInfo, setUserInfo ] = useState({ username: '', avatar: 'pikachu' }); // Current user
 
 	useEffect(() => {
 		socket = io(SOCKET_ENDPOINT);

@@ -1,10 +1,8 @@
 import React, { useEffect } from 'react';
 import "./UserInfo.scss";
-import { USER_INFO_LS_KEY } from "../../../utils/constants";
+import { USER_INFO_LS_KEY, AVATAR_NAMES } from "../../../utils/constants";
 import storage from "../../../utils/storage";
 import Avatar from "../../Avatar/Avatar";
-
-const avatarsNames = ['snorlax', 'psyduck', 'pikachu', 'jigglypuff', 'bullbasaur'];
 
 // This component handles user data
 const UserInfo = ({ userInfo, setUserInfo }) => {
@@ -28,7 +26,7 @@ const UserInfo = ({ userInfo, setUserInfo }) => {
 
 	const generateAvatar = (username) => {
 		let lotteryNumber = Math.floor(Math.random() * Math.floor(5)); // Get's a random number between 0 - 4
-		return avatarsNames[lotteryNumber];
+		return AVATAR_NAMES[lotteryNumber];
 	}
 
 	return (
