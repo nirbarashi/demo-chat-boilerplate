@@ -23,7 +23,7 @@ const UserInfo = ({ userInfo, setUserInfo }) => {
 	}
 
 	const generateAvatar = (username) => {
-		let lotteryNumber = Math.floor(Math.random() * Math.floor(5)); // Get's a random number between 0 - 4
+		let lotteryNumber = [...username].reduce((acc, char) => acc += char.charCodeAt(), 0) % 5; // Get's a random number between 0 - 4 by username
 		return AVATAR_NAMES[lotteryNumber];
 	}
 
